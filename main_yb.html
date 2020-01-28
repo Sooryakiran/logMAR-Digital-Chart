@@ -15,6 +15,20 @@
 <div id="info" ><br>
 1.0 logMAR<br>
 </div>
+<div class="popup"><div onclick="popUp()" >Calibrate</div>
+  <span class="popuptext" style="top:30px;" id="myPopup"><br>Move the slider until the red line is 1 inch or till the letters are of appropriate size.<br>
+    <div class="slidecontainer"; style="padding:1em">
+      <input disabled id="input_num" type="number" value="2.1" name="quantity" min="0.1" max="4"><br>
+      <input type="range" min="0.1" max="4" value="2.1" step = "0.01" class="slider" id="myRange" oninput="updateScale(this.value)" onchange="updateScale(this.value)"/><br><br>
+      <div id="red_line" style="background-color:rgb(255,0,0); width:50%; height:20px;" ></div>
+      <br>
+      <input style="border:none; border-radius:10px; padding:1em; background-color: rgba(255, 255, 255, 0.6)" type="button" value="Done" onclick="popUp()">
+    </div>
+
+
+
+  </span>
+</div>
 </center>
 </body>
 

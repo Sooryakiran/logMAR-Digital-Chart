@@ -1,11 +1,26 @@
 current_color = 0;
+scale_value = 1.5;
 
 function initializer(){
   autoSize();
   randomChar();
+  updateScale(scale_value);
   setColor(current_color);
 }
 
+function updateScale(val){
+  document.getElementById("input_num").value = val;
+  var width = getDPI()*val;
+  document.getElementById("red_line").style.width = width + "px";
+  scale_value = val;
+  autoSize();
+}
+
+
+function popUp() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
 
 function getDPI(){
   var dpi_x = document.getElementById('dpi').offsetWidth;
@@ -26,7 +41,7 @@ function setColor(option){
 }
 
 function setSize(inp){
-  scaled = inp*getDPI()/72*2.1;
+  scaled = inp*getDPI()/72*scale_value*1.4;
   document.getElementById("view").style.fontSize = scaled + "cm";
   w = document.getElementById("view").offsetWidth;
   if (w  > screen.width){
