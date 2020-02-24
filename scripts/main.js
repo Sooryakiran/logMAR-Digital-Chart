@@ -54,7 +54,9 @@ function setColor(option){
 }
 
 function setSize(inp){
-  scaled = inp*getDPI()/72*scale_value*1.4;
+  scaled = inp*getDPI()/72*scale_value*1.4 + 0.4;
+  // console.log(scaled)
+  // console.log("HHHHHH");
   document.getElementById("view").style.fontSize = scaled + "cm";
   w = document.getElementById("view").offsetWidth;
   if (w  > screen.width){
@@ -80,8 +82,8 @@ function autoSize(){
   var distance = 4.0 * Math.pow(10, current_value);
   var h = Math.tan(5/60 * Math.PI/180) * distance * 100;
   console.log("SIZE" + distance)
-  display()
   setSize(h);
+  display()
 
 }
 
