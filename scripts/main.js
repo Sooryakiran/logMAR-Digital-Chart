@@ -1,6 +1,7 @@
-current_color = 0;
+current_color = 3;
 scale_value = 1.5;
-color_string = ["570 nm", "580 nm", "590 nm", "Black & White"]
+color_string = ["577 nm", "587 nm", "597 nm", "Black & White"]
+
 function initializer(){
   autoSize();
   randomChar();
@@ -31,18 +32,18 @@ function getDPI(){
 
 function setColor(option){
   if(option == 0){
-    // 570 nm
-    document.getElementById("body_main").style.background = "rgb(225, 255, 0)";
+    // 577 nm
+    document.getElementById("body_main").style.background = "rgb(246, 255, 0)";
     document.getElementById("body_main").style.color = "rgb(0, 0, 255)";
   }
   else if(option == 1){
-    // 580
-    document.getElementById("body_main").style.background = "rgb(255, 255, 0)";
+    // 587
+    document.getElementById("body_main").style.background = "rgb(255, 233, 0)";
     document.getElementById("body_main").style.color = "rgb(0, 0, 255)";
   }
   else if(option == 2){
-    // 590
-    document.getElementById("body_main").style.background = "rgb(255, 223, 0)";
+    // 597
+    document.getElementById("body_main").style.background = "rgb(255, 200, 0)";
     document.getElementById("body_main").style.color = "rgb(0, 0, 255)";
   }
   else if(option == 3){
