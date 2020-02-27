@@ -1,6 +1,6 @@
 current_color = 3;
 scale_value = 1.5;
-color_string = ["577 nm", "587 nm", "593 nm", "Black & White"]
+color_string = ["577 nm", "587 nm", "590 nm", "Black & White"]
 
 function initializer(){
   autoSize();
@@ -43,7 +43,7 @@ function setColor(option){
   }
   else if(option == 2){
     // 593
-    document.getElementById("body_main").style.background = "rgb(255, 213, 0)";
+    document.getElementById("body_main").style.background = "rgb(255, 223, 0)";
     document.getElementById("body_main").style.color = "rgb(0, 0, 255)";
   }
   else if(option == 3){
