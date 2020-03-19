@@ -56,6 +56,14 @@ function setColor(option){
 
 function setSize(inp){
   scaled = inp*getDPI()/72*scale_value*1.4 + 0.4;
+  // console.log("HEHEHEH: " + str(inp))
+  if(inp>3){
+    scaled = inp*getDPI()/72*scale_value*1.5-0.1;
+  }
+  else{
+    scaled = inp*getDPI()/72*scale_value*1.5
+  }
+  console.log("HEHEHEH: " + (inp));
   // console.log(scaled)
   // console.log("HHHHHH");
   document.getElementById("view").style.fontSize = scaled + "cm";
@@ -82,7 +90,7 @@ function display(){
 function autoSize(){
   var distance = 4.0 * Math.pow(10, current_value);
   var h = Math.tan(5/60 * Math.PI/180) * distance * 100;
-  console.log("SIZE" + distance)
+  console.log("SIZE" + h)
   setSize(h);
   display()
 
