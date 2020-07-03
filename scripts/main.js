@@ -2,6 +2,23 @@ current_color = 3;
 scale_value = 1.5;
 color_string = ["577 nm", "587 nm", "590 nm", "Black & White"]
 
+
+
+function openFullScreen(elem) {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+
+
+
+
 function initializer(){
   autoSize();
   randomChar();
@@ -156,3 +173,6 @@ document.onkeydown = function(event) {
     autoSize();
     console.log("Current logMAR: " + current_value);
 };
+
+
+

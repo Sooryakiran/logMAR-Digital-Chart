@@ -118,19 +118,38 @@
   color:rgb(210, 180, 0);
 }
 
+.neo-card {
+	border-radius: 10px;
+}
+
+.neo-shade {
+	box-shadow: 
+			 5px  5px 10px  rgb(0,0,0, 0.2),
+		  -5px -5px 15px  rgba(255, 255, 255, 0.7);
+}
+
+.heading {
+  background: -webkit-linear-gradient(45deg, rgb(170, 70, 170), rgb(150, 60, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heading-inv {
+  background: -webkit-linear-gradient(45deg, rgb(170, 70, 170), rgb(150, 60, 255));
+}
+
 .bg {
   /* The image used */
-  background-color: black;
-  background-image: url("bg.jpg");
+  background-color: white;
+  background-image: url("bg_2.jpg");
 
   /* Full height */
   height: 100%;
 
   /* Center and scale the image nicely */
-  background-position: center;
+  background-position: stretch;
   background-repeat: no-repeat;
   background-size: cover;
-  color:rgb(210, 180, 0);
 }
 
 #splash{
