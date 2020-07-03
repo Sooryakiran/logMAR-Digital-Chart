@@ -54,9 +54,18 @@ function setColor(option){
 
 }
 
+function trunc_float(input, format){
+	return Math.trunc(input*format)/format;
+}
+
 function setSize(inp){
+	if(inp < 2)
+	{
+		inp = trunc_float(inp, 10);
+  }
+
   scaled = inp*getDPI()/72*scale_value*1.4 + 0.4;
-  // console.log("HEHEHEH: " + str(inp))
+  console.log("HEHEHEH: " + inp)
   if(inp>3){
     scaled = inp*getDPI()/72*scale_value*1.5-0.1;
   }
