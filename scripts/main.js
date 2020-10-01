@@ -138,7 +138,7 @@ function right(){
 }
 
 function randomChar(){
-  var master = "HDKCSRNSVZVO";
+  var master = "HDKCSRNVZO";
   var shuffled = master.split('').sort(function(){return 0.5-Math.random()}).join('');
   var str = shuffled.slice(0,5);
   document.getElementById("view").innerHTML = str;
